@@ -1,7 +1,7 @@
 package rest.service;
 
-import entities.RenameMe;
-import facades.FacadeExample;
+import entities.Employee;
+import facades.EmployeeFacade;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -21,7 +21,7 @@ import javax.ws.rs.core.MediaType;
 public class RenameMeResource {
 
     
-    FacadeExample cf = new FacadeExample();
+    EmployeeFacade cf = new EmployeeFacade();
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
@@ -31,14 +31,14 @@ public class RenameMeResource {
 
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
-    public void create(RenameMe entity) {
+    public void create(Employee entity) {
         throw new UnsupportedOperationException();
     }
     
     @PUT
     @Path("/{id}")
     @Consumes({MediaType.APPLICATION_JSON})
-    public void update(RenameMe entity, @PathParam("id") int id) {
+    public void update(Employee entity, @PathParam("id") int id) {
         throw new UnsupportedOperationException();
     }
 }
