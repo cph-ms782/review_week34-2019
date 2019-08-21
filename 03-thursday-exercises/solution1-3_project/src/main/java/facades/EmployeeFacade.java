@@ -20,7 +20,7 @@ public class EmployeeFacade {
      * @param _emf
      * @return an instance of this facade class.
      */
-    public static EmployeeFacade getFacadeExample(EntityManagerFactory _emf) {
+    public static EmployeeFacade getEmployeeFacade(EntityManagerFactory _emf) {
         if (instance == null) {
             emf = _emf;
             instance = new EmployeeFacade();
@@ -68,15 +68,20 @@ public class EmployeeFacade {
     public Employee getEmployeesWithHighestSalary() {
         EntityManager em = emf.createEntityManager();
         try {
-            TypedQuery<Employee> query
-                    = em.createQuery("Select e from Employee e Where MAX(e.salary)", Employee.class);
-            return query.getSingleResult();
+            TypedQuery<Double> query
+                    = em.createQuery("Select MAX(e.salary) from Employee e", Double.class);
+            for (Employee empl : getAllEmployees()) {
+                if (empl.getSalary() == query.getSingleResult()) {
+                    return empl;
+                }
+            }
+            return null;
         } finally {
             em.close();
         }
     }
 
-    public Employee createEmployee(String fName, String lName, float salary) {
+    public Employee createEmployee(String fName, String lName, double salary) {
         Employee employee = new Employee(fName, lName, salary);
         EntityManager em = emf.createEntityManager();
         try {
