@@ -16,12 +16,12 @@ public class Employee implements Serializable {
     private Long id;
     private String name;
     private String address;
-    private float salary;
+    private double salary;
 
     public Employee() {
     }
 
-    public Employee(String name, String address, float salary) {
+    public Employee(String name, String address, double salary) {
         this.name = name;
         this.address = address;
         this.salary = salary;
@@ -51,7 +51,7 @@ public class Employee implements Serializable {
         this.address = address;
     }
 
-    public float getSalary() {
+    public double getSalary() {
         return salary;
     }
 
@@ -66,11 +66,11 @@ public class Employee implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 59 * hash + Objects.hashCode(this.id);
-        hash = 59 * hash + Objects.hashCode(this.name);
-        hash = 59 * hash + Objects.hashCode(this.address);
-        hash = 59 * hash + Float.floatToIntBits(this.salary);
+        int hash = 7;
+        hash = 19 * hash + Objects.hashCode(this.id);
+        hash = 19 * hash + Objects.hashCode(this.name);
+        hash = 19 * hash + Objects.hashCode(this.address);
+        hash = 19 * hash + (int) (Double.doubleToLongBits(this.salary) ^ (Double.doubleToLongBits(this.salary) >>> 32));
         return hash;
     }
 
@@ -86,7 +86,7 @@ public class Employee implements Serializable {
             return false;
         }
         final Employee other = (Employee) obj;
-        if (Float.floatToIntBits(this.salary) != Float.floatToIntBits(other.salary)) {
+        if (Double.doubleToLongBits(this.salary) != Double.doubleToLongBits(other.salary)) {
             return false;
         }
         if (!Objects.equals(this.name, other.name)) {
@@ -101,5 +101,6 @@ public class Employee implements Serializable {
         return true;
     }
 
+    
     
 }
