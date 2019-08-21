@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package facades;
 
 import entities.Employee;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -20,38 +16,32 @@ import static org.junit.Assert.*;
  * @author msi
  */
 public class EmployeeFacadeTest {
-    
+
+    EntityManagerFactory emf;
+    EmployeeFacade facade;
+
     public EmployeeFacadeTest() {
+        emf = Persistence.createEntityManagerFactory("pu");
+        facade = EmployeeFacade.getEmployeeFacade(emf);
+        facade.createEmployee("Hans", "Jørgensen", 245452.50);
+        facade.createEmployee("Peter", "Jørgensen", 456236.25);
+        facade.createEmployee("Jens", "Hansen", 198526.75);
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
-    }
-
-    /**
-     * Test of getFacadeExample method, of class EmployeeFacade.
-     */
-    @Test
-    public void testGetFacadeExample() {
-        System.out.println("getFacadeExample");
-        EntityManagerFactory _emf = null;
-        EmployeeFacade expResult = null;
-        EmployeeFacade result = EmployeeFacade.getFacadeExample(_emf);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -60,13 +50,10 @@ public class EmployeeFacadeTest {
     @Test
     public void testGetEmployeeById() {
         System.out.println("getEmployeeById");
-        int id = 0;
-        EmployeeFacade instance = new EmployeeFacade();
-        Employee expResult = null;
-        Employee result = instance.getEmployeeById(id);
+        int id = 1;
+        Employee expResult = new Employee(1, "Hans", "Jørgensen", 245452.50);
+        Employee result = facade.getEmployeeById(id);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -128,5 +115,5 @@ public class EmployeeFacadeTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-    
+
 }
