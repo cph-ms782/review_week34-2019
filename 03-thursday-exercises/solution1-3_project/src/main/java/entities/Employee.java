@@ -13,7 +13,7 @@ public class Employee implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     private String name;
     private String address;
     private double salary;
@@ -21,17 +21,28 @@ public class Employee implements Serializable {
     public Employee() {
     }
 
+
     public Employee(String name, String address, double salary) {
         this.name = name;
         this.address = address;
         this.salary = salary;
     }
 
-    public Long getId() {
+    /**
+     * Extra overloaded constructor for testing purposes
+     */
+    public Employee(Integer id, String name, String address, double salary) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.salary = salary;
+    }
+    
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
