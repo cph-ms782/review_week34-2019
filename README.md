@@ -12,6 +12,7 @@ Exercise 3: Return an object
 
 03-thursday-exercises: "Combining JPA with Web service"
 Exercise 1: Using the start code
+Test not done properly because table is not deleted between tests. So last test is not working
 
 Exercise 2: Create DTO class
 
