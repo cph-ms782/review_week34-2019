@@ -1,6 +1,7 @@
 package facades;
 
 import entities.Employee;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -17,15 +18,14 @@ import static org.junit.Assert.*;
  */
 public class EmployeeFacadeTest {
 
-    EntityManagerFactory emf;
+    EntityManagerFactory emfa;
     EmployeeFacade facade;
+    Employee emp1;
+    Employee emp2;
+    Employee emp3;
+    Employee emp4;
 
     public EmployeeFacadeTest() {
-        emf = Persistence.createEntityManagerFactory("pu");
-        facade = EmployeeFacade.getEmployeeFacade(emf);
-        facade.createEmployee("Hans", "Jørgensen", 245452.50);
-        facade.createEmployee("Peter", "Jørgensen", 456236.25);
-        facade.createEmployee("Jens", "Hansen", 198526.75);
     }
 
     @BeforeClass
@@ -38,10 +38,26 @@ public class EmployeeFacadeTest {
 
     @Before
     public void setUp() {
+        emfa = Persistence.createEntityManagerFactory("pu");
+        facade = EmployeeFacade.getEmployeeFacade(emfa);
+
+
+        //Fill table
+        facade.createEmployee("Hans Jørgensen", "Hansenvej 23", 245452.50);
+        facade.createEmployee("Peter Jensen", "Jensvej 11", 456236.25);
+        facade.createEmployee("Jens Hansen", "Hejsavej 21", 198526.75);
+
+        //Make employee objects
+        emp1 = new Employee(1, "Hans Jørgensen", "Hansenvej 23", 245452.50);
+        emp2 = new Employee(2, "Peter Jensen", "Jensvej 11", 456236.25);
+        emp3 = new Employee(3, "Jens Hansen", "Hejsavej 21", 198526.75);
+        emp4 = new Employee(10, "Børge Pedersen", "Hjørnevej 321", 248752.75);
     }
 
     @After
     public void tearDown() {
+        // Empty table
+        facade.emptyTable();
     }
 
     /**
@@ -51,7 +67,7 @@ public class EmployeeFacadeTest {
     public void testGetEmployeeById() {
         System.out.println("getEmployeeById");
         int id = 1;
-        Employee expResult = new Employee(1, "Hans", "Jørgensen", 245452.50);
+        Employee expResult = emp1;
         Employee result = facade.getEmployeeById(id);
         assertEquals(expResult, result);
     }
@@ -62,13 +78,12 @@ public class EmployeeFacadeTest {
     @Test
     public void testGetEmployeesByName() {
         System.out.println("getEmployeesByName");
-        String employeeName = "";
+        String employeeName = "Hans Jørgensen";
         EmployeeFacade instance = new EmployeeFacade();
-        List<Employee> expResult = null;
+        List<Employee> expResult = new ArrayList<>();
+        expResult.add(emp1);
         List<Employee> result = instance.getEmployeesByName(employeeName);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -78,11 +93,9 @@ public class EmployeeFacadeTest {
     public void testGetAllEmployees() {
         System.out.println("getAllEmployees");
         EmployeeFacade instance = new EmployeeFacade();
-        List<Employee> expResult = null;
-        List<Employee> result = instance.getAllEmployees();
+        int expResult = 13;
+        int result = instance.getAllEmployees().size();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -92,11 +105,9 @@ public class EmployeeFacadeTest {
     public void testGetEmployeesWithHighestSalary() {
         System.out.println("getEmployeesWithHighestSalary");
         EmployeeFacade instance = new EmployeeFacade();
-        Employee expResult = null;
+        Employee expResult = emp2;
         Employee result = instance.getEmployeesWithHighestSalary();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -105,15 +116,13 @@ public class EmployeeFacadeTest {
     @Test
     public void testCreateEmployee() {
         System.out.println("createEmployee");
-        String fName = "";
-        String lName = "";
-        float salary = 0.0F;
+        String name = "Børge Pedersen";
+        String address = "Hjørnevej 321";
+        double salary = 248752.75;
         EmployeeFacade instance = new EmployeeFacade();
-        Employee expResult = null;
-        Employee result = instance.createEmployee(fName, lName, salary);
+        Employee expResult = emp4;
+        Employee result = instance.createEmployee(name, address, salary);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
 }

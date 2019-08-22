@@ -46,7 +46,7 @@ public class EmployeeFacade {
         EntityManager em = emf.createEntityManager();
         try {
             TypedQuery<Employee> query
-                    = em.createQuery("Select e from Employee e WHERE name = :employeeName", Employee.class)
+                    = em.createQuery("Select e from Employee e WHERE e.name = :employeeName", Employee.class)
                             .setParameter("employeeName", employeeName);
             return query.getResultList();
         } finally {
@@ -81,14 +81,26 @@ public class EmployeeFacade {
         }
     }
 
-    public Employee createEmployee(String fName, String lName, double salary) {
-        Employee employee = new Employee(fName, lName, salary);
+    public Employee createEmployee(String name, String address, double salary) {
+        Employee employee = new Employee(name, address, salary);
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
             em.persist(employee);
             em.getTransaction().commit();
             return employee;
+        } finally {
+            em.close();
+        }
+    }
+
+    public void emptyTable() {
+        EntityManager em = emf.createEntityManager();
+        try {
+            int deletedCount = em.createQuery("DELETE FROM Employee").executeUpdate();
+            System.out.println("deletedCount: " + deletedCount);
+        } catch (Exception e) {
+            System.out.println("Error during deletion: " + e);
         } finally {
             em.close();
         }
