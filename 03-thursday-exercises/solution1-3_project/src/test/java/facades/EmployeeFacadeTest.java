@@ -3,6 +3,7 @@ package facades;
 import entities.Employee;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import org.junit.After;
@@ -80,7 +81,7 @@ public class EmployeeFacadeTest {
         System.out.println("getEmployeesByName");
         String employeeName = "Hans Jørgensen";
         EmployeeFacade instance = new EmployeeFacade();
-        List<Employee> expResult = new ArrayList<>();
+        List<Employee> expResult = new Vector<>();
         expResult.add(emp1);
         List<Employee> result = instance.getEmployeesByName(employeeName);
         assertEquals(expResult, result);
