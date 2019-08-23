@@ -2,7 +2,7 @@
 
 ## Week 34-2019
 
-#### 01-tuesday-exercises: JPA flow-1  
+### 01-tuesday-exercises: JPA flow-1  
 Commit: d721fcaa9b93afacbba1e7b981ef236ce7676d9e  
 **EX-1 JPA, Entity Classes, transaction and cool JPA-Queries** (folder: "/solution1") (100%):  
 **Ex-2   The Entity Class and Facades** (folder: /solution2") (100%):  
@@ -10,7 +10,7 @@ Commit: d721fcaa9b93afacbba1e7b981ef236ce7676d9e
   
   
   
-#### 02-wednesday-exercises:
+### 02-wednesday-exercises:
 **Exercise 1: Simple Rest endpoint** (100%) (Folder: "/Exercise_1-3")  
 **Exercise 2: Json endpoint**  
 **Exercise 3: Return an object**  
@@ -20,7 +20,7 @@ Commit: 1bb0af94a087cf93fb310c5a10cedda333bdef70
   
   
   
-#### 03-thursday-exercises/solution1-3_project: "Combining JPA with Web service"
+### 03-thursday-exercises/solution1-3_project: "Combining JPA with Web service"
 **Exercise 1: Using the start code** (95% done),  
 Test 5 er ikke færdig. Den lavede ballade med databasen :-),  
 Commit: d8a3638cadd0df90ffac03008ae519eda942aa6e  
