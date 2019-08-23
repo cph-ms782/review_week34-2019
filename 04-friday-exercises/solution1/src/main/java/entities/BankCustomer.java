@@ -8,14 +8,14 @@ import javax.persistence.Id;
 
 
 @Entity
-public class RenameMe implements Serializable {
+public class BankCustomer implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public RenameMe() {
+    public BankCustomer() {
     }
         
     public Long getId() {

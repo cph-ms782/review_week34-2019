@@ -28,11 +28,17 @@ commit: 06594ab72201ba9aad80533ad8cddb536442e5fa
 Læringsmål:
 
 
-
-
-Exercise 4: Deploy (100%)
+Exercise 4: Deploy (95%)
 Commit: 8b4ce60ed332121c78b22ceb19f39823659aefeb
+http://167.71.51.224:8080/thursday/api/employee/all
+http://167.71.51.224:8080/thursday/api/employee/1
+http://167.71.51.224:8080/thursday/api/employee/highestpaid
+Name doesn't work:
+http://167.71.51.224:8080/thursday/api/employee/Hans Pedersen
 
 
 
-04-friday-exercises
+04-friday-exercises: "JPA, REST and DataTransfer Objects"
+1. (100%)
+
+2.

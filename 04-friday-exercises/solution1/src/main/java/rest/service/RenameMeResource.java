@@ -1,6 +1,6 @@
 package rest.service;
 
-import entities.RenameMe;
+import entities.BankCustomer;
 import facades.FacadeExample;
 import java.util.List;
 import javax.persistence.EntityManager;
@@ -31,14 +31,14 @@ public class RenameMeResource {
 
     @POST
     @Consumes({MediaType.APPLICATION_JSON})
-    public void create(RenameMe entity) {
+    public void create(BankCustomer entity) {
         throw new UnsupportedOperationException();
     }
     
     @PUT
     @Path("/{id}")
     @Consumes({MediaType.APPLICATION_JSON})
-    public void update(RenameMe entity, @PathParam("id") int id) {
+    public void update(BankCustomer entity, @PathParam("id") int id) {
         throw new UnsupportedOperationException();
     }
 }
