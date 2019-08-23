@@ -2,7 +2,7 @@
 
 ## Week 34-2019
 
-### 01-tuesday-exercises: JPA flow-1  
+#### 01-tuesday-exercises: JPA flow-1  
 Commit: d721fcaa9b93afacbba1e7b981ef236ce7676d9e  
 EX-1 JPA, Entity Classes, transaction and cool JPA-Queries. (folder: "/solution1") (100%):  
 Ex-2   The Entity Class and Facades (folder: /solution2") (100%):  
@@ -83,5 +83,5 @@ Commit: 2feb899e6c32f37b944d6520eaa7c5314831c15b
 
 Deploy your solution:
 1.-5.100%)  
-http://167.71.51.224:8080/friday/api/bankcustomer/all  
+(http://167.71.51.224:8080/friday/api/bankcustomer/all)  
 http://167.71.51.224:8080/friday/api/bankcustomer/100
