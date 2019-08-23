@@ -2,7 +2,7 @@
 
 ## Week 34-2019
 
-###### 01-tuesday-exercises: JPA flow-1  
+#### 01-tuesday-exercises: JPA flow-1  
 Commit: d721fcaa9b93afacbba1e7b981ef236ce7676d9e  
 EX-1 JPA, Entity Classes, transaction and cool JPA-Queries. (folder: "/solution1") (100%):  
 Ex-2   The Entity Class and Facades (folder: /solution2") (100%):\
