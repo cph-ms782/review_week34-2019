@@ -1,4 +1,4 @@
-CPHbusiness - 3. semester
+## CPHbusiness - 3. semester
 
 Week 34-2019
 
@@ -10,14 +10,12 @@ Ex-3  Add a JUnit Test to your facade (20%):
 
 
 02-wednesday-exercises:
-Exercise 1: Simple Rest endpoint:
+Exercise 1: Simple Rest endpoint (100%) (Folder: "/Exercise_1-3")
 Exercise 2: Json endpoint
 Exercise 3: Return an object
 Commit: 1bb0af94a087cf93fb310c5a10cedda333bdef70
 
-Exercise 4: Use JPA with your web service
-
-
+Exercise 4: Use JPA with your web service (100%) (Folder: "/Exercise_4")
 
 
 
