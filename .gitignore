@@ -50,7 +50,7 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-persistence.xml
+#persistence.xml
 
 # Dump file
 *.stackdump
