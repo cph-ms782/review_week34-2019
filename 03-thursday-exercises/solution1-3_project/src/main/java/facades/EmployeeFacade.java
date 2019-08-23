@@ -97,7 +97,7 @@ public class EmployeeFacade {
     public void emptyTable() {
         EntityManager em = emf.createEntityManager();
         try {
-            int deletedCount = em.createQuery("DELETE FROM Employee").executeUpdate();
+            int deletedCount = em.createQuery("DELETE FROM Employee WHERE id>=0").executeUpdate();
             System.out.println("deletedCount: " + deletedCount);
         } catch (Exception e) {
             System.out.println("Error during deletion: " + e);
