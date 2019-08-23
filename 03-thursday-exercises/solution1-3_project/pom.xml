@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dk.webtrade</groupId>
-    <artifactId>Thursday_exercise_1</artifactId>
+    <artifactId>thursday</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>Thursday_exercise_1</name>
+    <name>thursday</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

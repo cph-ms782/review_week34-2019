@@ -11,7 +11,6 @@ import javax.persistence.TypedQuery;
  * Rename Class to a relevant name Add add relevant facade methods
  */
 public class EmployeeFacade {
-
     private static EmployeeFacade instance;
     private static EntityManagerFactory emf;
 
