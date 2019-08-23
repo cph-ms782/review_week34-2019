@@ -40,12 +40,12 @@ Commit: 8b4ce60ed332121c78b22ceb19f39823659aefeb
 http://167.71.51.224:8080/thursday/api/employee/all  
 http://167.71.51.224:8080/thursday/api/employee/1  
 http://167.71.51.224:8080/thursday/api/employee/highestpaid  
-Name doesn't work:  
+Navn virker ikke:  
 http://167.71.51.224:8080/thursday/api/employee/Hans Pedersen
   
   
 
-#### 04-friday-exercises/solution1: "JPA, REST and DataTransfer Objects"
+### 04-friday-exercises/solution1: "JPA, REST and DataTransfer Objects"
 **1.** (100%)  
 Commit: cea6bd6fd14e3d0d17bfbd214ee6f548b46126bd
 
