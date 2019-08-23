@@ -1,12 +1,16 @@
 CPHbusiness - 3. semester
 
 Week 34-2019
-01-tuesday-exercises/solution1: JPA flow-1
 
-EX-1 JPA, Entity Classes, transaction and cool JPA-Queries.
+01-tuesday-exercises: JPA flow-1
 
+EX-1 JPA, Entity Classes, transaction and cool JPA-Queries. (folder: "/solution1") (100%):
+Commit: eec6bc6591df52b476c8c9bccd947f639f859b8c
 
-Ex-2   The Entity Class and Facades
+Ex-2   The Entity Class and Facades (folder: /solution2") (100%):
+Commit: 1439b4e94c725e462b414c7f8a83a2d93992798a
+
+Ex-3  Add a JUnit Test to your facade (20%):
 
 
 02-wednesday-exercises:
