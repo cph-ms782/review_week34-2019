@@ -37,7 +37,7 @@ public class BankCustomerFacade {
         return emf.createEntityManager();
     }
 
-    CustomerDTO getCustomerByID(int id) {
+    public CustomerDTO getCustomerByID(int id) {
         EntityManager em = emf.createEntityManager();
         try {
             BankCustomer bc = em.find(BankCustomer.class, id);
@@ -47,7 +47,7 @@ public class BankCustomerFacade {
         }
     }
 
-    List<CustomerDTO> getCustomerByName(String name) {
+    public List<CustomerDTO> getCustomerByName(String name) {
         EntityManager em = emf.createEntityManager();
         List<CustomerDTO> liste = new ArrayList();
         try {
@@ -63,7 +63,7 @@ public class BankCustomerFacade {
         }
     }
 
-    BankCustomer addCustomer(BankCustomer cust) {
+    public BankCustomer addCustomer(BankCustomer cust) {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
@@ -75,7 +75,7 @@ public class BankCustomerFacade {
         }
     }
 
-    List<BankCustomer> getAllBankCustomers() {
+    public List<BankCustomer> getAllBankCustomers() {
         EntityManager em = emf.createEntityManager();
         try {
             TypedQuery<BankCustomer> query
