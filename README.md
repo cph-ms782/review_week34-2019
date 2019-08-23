@@ -66,6 +66,13 @@ Commit: 2e3107db2d79a64b6bc0541cc15fbf111d73f868
 Commit: e1fa5ee873b214de1387159a1c5b0dba02880563
 
 9. (0%)
+No Junit tests
 
-10. (&)
-Commit
+10. (100&)
+Commit: 2feb899e6c32f37b944d6520eaa7c5314831c15b
+
+
+Deploy your solution:
+1.-5.100%)
+http://167.71.51.224:8080/friday/api/bankcustomer/all
+http://167.71.51.224:8080/friday/api/bankcustomer/100
