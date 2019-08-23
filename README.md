@@ -33,7 +33,6 @@ Commit: 448188507410e7e8dfa34ef79240aac30464d592
 
 **Exercise 3: Exposing endpoints** (100%),  
 Commit: 06594ab72201ba9aad80533ad8cddb536442e5fa  
-Læringsmål:
 
 
 **Exercise 4: Deploy** (95%)  
