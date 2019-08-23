@@ -1,7 +1,12 @@
 CPHbusiness - 3. semester
 
 Week 34-2019
-01-tuesday-exercises:
+01-tuesday-exercises/solution1: JPA flow-1
+
+EX-1 JPA, Entity Classes, transaction and cool JPA-Queries.
+
+
+Ex-2   The Entity Class and Facades
 
 
 02-wednesday-exercises:
@@ -11,10 +16,10 @@ Exercise 3: Return an object
 
 
 
-03-thursday-exercises: "Combining JPA with Web service"
+03-thursday-exercises/solution1-3_project: "Combining JPA with Web service"
 
 Exercise 1: Using the start code (95% done),
-Test 5 er ikke færdig. Den laver ballade med databasen :-),
+Test 5 er ikke færdig. Den lavede ballade med databasen :-),
 Commit: d8a3638cadd0df90ffac03008ae519eda942aa6e
 Læringsmål:
 Designe simple GET-endpoints med brug af en underliggende database tilgået via JPA
@@ -38,7 +43,7 @@ http://167.71.51.224:8080/thursday/api/employee/Hans Pedersen
 
 
 
-04-friday-exercises: "JPA, REST and DataTransfer Objects"
+04-friday-exercises/solution1: "JPA, REST and DataTransfer Objects"
 1. (100%)
 Commit: cea6bd6fd14e3d0d17bfbd214ee6f548b46126bd
 
