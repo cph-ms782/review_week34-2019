@@ -10,7 +10,7 @@ Commit: d721fcaa9b93afacbba1e7b981ef236ce7676d9e
   
   
   
-### 02-wednesday-exercises:
+### 02-wednesday-exercises: "Restful web service - simple"  
 **Exercise 1: Simple Rest endpoint** (100%) (Folder: "/Exercise_1-3")  
 **Exercise 2: Json endpoint**  
 **Exercise 3: Return an object**  
