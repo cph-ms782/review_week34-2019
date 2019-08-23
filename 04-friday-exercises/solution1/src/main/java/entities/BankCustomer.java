@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity
 public class BankCustomer implements Serializable {
 
@@ -13,16 +14,10 @@ public class BankCustomer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    String firstName;
-    String lastName;
-    String accountNumber;
-    double balance;
-    int customerRanking;
-    String internalInfo;
 
     public BankCustomer() {
     }
-
+        
     public Long getId() {
         return id;
     }
@@ -30,5 +25,5 @@ public class BankCustomer implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
-
+    
 }
