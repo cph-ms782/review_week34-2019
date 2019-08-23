@@ -9,7 +9,7 @@ Ex-2   The Entity Class and Facades (folder: /solution2") (100%):\
 Ex-3  Add a JUnit Test to your facade (20%):  
 \
 \
-\
+
 ##### 02-wednesday-exercises:
 Exercise 1: Simple Rest endpoint (100%) (Folder: "/Exercise_1-3")
 Exercise 2: Json endpoint
@@ -19,7 +19,7 @@ Commit: 1bb0af94a087cf93fb310c5a10cedda333bdef70
 Exercise 4: Use JPA with your web service (100%) (Folder: "/Exercise_4")
 \
 \
-\
+
 ##### 03-thursday-exercises/solution1-3_project: "Combining JPA with Web service"
 
 Exercise 1: Using the start code (95% done),
@@ -38,15 +38,15 @@ Læringsmål:
 
 
 Exercise 4: Deploy (95%)
-Commit: 8b4ce60ed332121c78b22ceb19f39823659aefeb
-http://167.71.51.224:8080/thursday/api/employee/all
-http://167.71.51.224:8080/thursday/api/employee/1
-http://167.71.51.224:8080/thursday/api/employee/highestpaid
+Commit: 8b4ce60ed332121c78b22ceb19f39823659aefeb\
+http://167.71.51.224:8080/thursday/api/employee/all\
+http://167.71.51.224:8080/thursday/api/employee/1\
+http://167.71.51.224:8080/thursday/api/employee/highestpaid\
 Name doesn't work:
 http://167.71.51.224:8080/thursday/api/employee/Hans Pedersen
 \
 \
-\
+
 ##### 04-friday-exercises/solution1: "JPA, REST and DataTransfer Objects"
 1. (100%)
 Commit: cea6bd6fd14e3d0d17bfbd214ee6f548b46126bd
@@ -82,6 +82,6 @@ Commit: 2feb899e6c32f37b944d6520eaa7c5314831c15b
 
 
 Deploy your solution:
-1.-5.100%)
-http://167.71.51.224:8080/friday/api/bankcustomer/all
+1.-5.100%)\
+http://167.71.51.224:8080/friday/api/bankcustomer/all\
 http://167.71.51.224:8080/friday/api/bankcustomer/100
